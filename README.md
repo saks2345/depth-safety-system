@@ -2,7 +2,6 @@
 
 Low-cost 3D perception pipeline using a single webcam. Estimates depth in real time, detects objects, and triggers an automatic motor cutoff via Arduino when something enters the safety zone.
 
-*Google Developers Hacktonic 2.0 – Finalist*
 
 ## Features
 - **Depth Anything V2 (Base)** monocular depth estimation (CPU, runs every 4th frame for speed)
