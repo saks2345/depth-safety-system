@@ -30,4 +30,8 @@ Keys: `Q`/`Esc` quit · `+`/`-` change danger threshold · `C` print status
 `tools/find_camera.py` lists available camera indexes.
 
 ## Arduino
-The Arduino listens for single characters over serial at 9600 baud: `G` = motors on, `S` = motors off.
+Upload `arduino/motor_control.ino` to the board. It listens at 9600 baud for single characters: `G` = motor on, `S` = motor off + buzzer + LED.
+
+- Edit the pin numbers and `MOTOR_ACTIVE_LOW` at the top of the sketch to match your wiring (defaults: motor/relay on pin 7, buzzer on pin 8).
+- **Failsafe:** the motor is off at power-up, and is cut automatically if no command arrives for 1.5 s (script crash, unplugged cable).
+- Close the Arduino Serial Monitor before running `zeo.py` (only one program can use the port).
